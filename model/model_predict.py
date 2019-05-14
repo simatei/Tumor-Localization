@@ -6,7 +6,7 @@ from skimage.util import view_as_blocks
 import matplotlib.pyplot as plt
 from scipy.ndimage.filters import gaussian_filter
 from scipy.ndimage.interpolation import shift
-from . import SavedModel
+from SavedModel import SavedModel
 
 
 def predict(model, path):
@@ -28,14 +28,14 @@ def predict(model, path):
 
     images = [
         image,
-        shift(image, [0, 70]),
-        shift(image, [0, -70]),
-        shift(image, [-70, 0]),
-        shift(image, [70, 0]),
-        shift(image, [70, 70]),
-        shift(image, [-70, 70]),
-        shift(image, [70, -70]),
-        shift(image, [-70, -70])
+        shift(image, [0, 64]),
+        shift(image, [0, -64]),
+        shift(image, [-64, 0]),
+        shift(image, [64, 0]),
+        shift(image, [64, 64]),
+        shift(image, [-64, 64]),
+        shift(image, [64, -64]),
+        shift(image, [-64, -64])
     ]
 
     overlay = np.zeros_like(image).astype(np.float32)
