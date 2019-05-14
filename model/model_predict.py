@@ -28,14 +28,14 @@ def predict(model, path):
 
     images = [
         image,
-        shift(image, [0, 70]),
-        shift(image, [0, -70]),
-        shift(image, [-70, 0]),
-        shift(image, [70, 0]),
-        shift(image, [70, 70]),
-        shift(image, [-70, 70]),
-        shift(image, [70, -70]),
-        shift(image, [-70, -70])
+        shift(image, [0, 64]),
+        shift(image, [0, -64]),
+        shift(image, [-64, 0]),
+        shift(image, [64, 0]),
+        shift(image, [64, 64]),
+        shift(image, [-64, 64]),
+        shift(image, [64, -64]),
+        shift(image, [-64, -64])
     ]
 
     overlay = np.zeros_like(image).astype(np.float32)
