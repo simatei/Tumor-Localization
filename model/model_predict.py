@@ -6,7 +6,7 @@ from skimage.util import view_as_blocks
 import matplotlib.pyplot as plt
 from scipy.ndimage.filters import gaussian_filter
 from scipy.ndimage.interpolation import shift
-from saved_model import SavedModel
+from . import SavedModel
 
 
 def predict(model, path):
